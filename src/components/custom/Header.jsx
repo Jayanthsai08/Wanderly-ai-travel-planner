@@ -52,7 +52,7 @@ function Header() {
     console.log(user)
   }, [])
   return (
-    <div className=" w-full py-3 px-3 shadow-lg flex justify-between item-center mt-0 sticky top-0 z-20 bg-white">
+    <div className=" w-full py-3 px-3 shadow-lg flex justify-between item-center mt-0 sticky top-0 z-20 backdrop-filter backdrop-blur-sm md:backdrop-blur-lg ">
       <img src='logo.svg' />
       <div className='flex flex-col-2 gap-7 mt-1'>
         <h2 className='font-semibold text-2xl md:text-xl lg:text-2xl'><a href="/">Home</a></h2>
