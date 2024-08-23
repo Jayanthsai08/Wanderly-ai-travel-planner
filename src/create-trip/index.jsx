@@ -112,7 +112,7 @@ function CreateTrip() {
   };
 
   return (
-    <div className='sm:px-10 md:px-21 lg:px-56 xl:px-10 px-5 mt-10'>
+    <div className='sm:px-10 md:px-21 lg:px-56 xl:px-10 px-5 mt-10 mx-56'>
       <h2 className='font-bold text-3xl'>
         Tell us your travel prefrences 🗺️📍
       </h2>

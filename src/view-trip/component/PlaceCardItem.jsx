@@ -26,11 +26,11 @@ function PlaceCardItem({ places }) {
         <Link to={'https://www.google.com/maps/search/?api=1&query=' + places?.placeName} target='_blank'>
             <div className='border rounded-xl p-3 shadow-md mt-2 flex gap-5 hover:scale-105 transition-all hover:shadow-lg cursor-pointer'>
                 <img src={PhotoUrl?PhotoUrl:'/placeholder.jpg'}
-                    className='w-[140px] h-[140px] rounded-xl'></img>
+                    className='w-[140px] h-[140px] rounded-xl object-cover '></img>
                 <div>
                     <h2 className='font-bold text-lg text-left'>{places?.placeName}</h2>
                     <p className='text-left text-sm text-gray-500'>{places?.placeDetails}</p>
-                    <h2 className='mt-2 text-left'> 🕘 {places?.timeToTravel}</h2>
+                    <h2 className='mt-2 text-left'>🕘 {places?.timeToTravel}</h2>
 
                     {/**enable to use navigation button */}
 
