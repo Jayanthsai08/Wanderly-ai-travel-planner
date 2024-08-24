@@ -9,50 +9,60 @@ import Footer from '../component/Footer';
 
 
 function Viewtrip() {
-    const {tripId}=useParams();
-    const [trip,setTrip]=useState([]);
+    const { tripId } = useParams();
+    const [trip, setTrip] = useState([]);
+    
 
-    useEffect(()=>{
-        tripId&&GetTripData();
-    },[tripId])
+        const user = JSON.parse(localStorage.getItem('user'));
 
-    /**
-     * Used to get trip information from firebase
-     * 
-     */
-    const GetTripData=async()=>{
-        const docRef=doc(db,'AITrips',tripId);
-        const docSnap=await getDoc(docRef)
-
-        if(docSnap.exists()){
-            console.log("Documents:",docSnap.data());
-            setTrip(docSnap.data());
+        if (!user) {
+            navigation('/');
+            return;
         }
-        else{
-            console("NO such Document found");
-            toast('No trip Found')
+        
+            
+            useEffect(() => {
+                tripId && GetTripData();
+            }, [tripId])
+
+            /**
+             * Used to get trip information from firebase
+             * 
+             */
+            const GetTripData = async () => {
+                const docRef = doc(db, 'AITrips', tripId);
+                const docSnap = await getDoc(docRef)
+
+                if (docSnap.exists()) {
+                    console.log("Documents:", docSnap.data());
+                    setTrip(docSnap.data());
+                }
+                else {
+                    console("NO such Document found");
+                    toast('No trip Found')
+                }
+            }
+
+
+
+            return (
+                <div className='p-10 md:px-30 lg:px-40 xl:px-50'>
+                    {/** Information section*/}
+
+                    <InfoSection trip={trip} />
+
+                    {/** Recomended hotels */}
+                    <Hotels trip={trip} />
+
+                    {/** Daily Plan*/}
+                    <PlacesToVisit trip={trip} />
+
+                    {/** Footer */}
+                    <Footer trip={trip} />
+
+                </div>
+            )
         }
-    }
+    
 
-
-
-  return (
-    <div className='p-10 md:px-30 lg:px-40 xl:px-50'> 
-        {/** Information section*/ }
-        
-       <InfoSection trip={trip}/>
-
-        {/** Recomended hotels */}
-        <Hotels trip={trip}/>
-
-        {/** Daily Plan*/}
-        <PlacesToVisit trip={trip}/>
-
-        {/** Footer */}
-        <Footer trip={trip}/>
-        
-        </div>
-  )
-}
-
-export default Viewtrip
+        export default Viewtrip;

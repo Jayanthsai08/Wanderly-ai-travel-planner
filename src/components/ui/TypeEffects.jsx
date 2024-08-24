@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 
-const searchPhrases = ["Top 10 bars in Budapest", "Hiking trips in Nepal", "Best clubs in Berlin", "Where to get local food", "Car rental in Rome"];
+const searchPhrases = ["Top 10 bars in Bengaluru", "Hiking trips in Nepal", "Best clubs in Berlin", "Where to get local food", "Car rental in Rome"];
 
 const TypingEffect = () => {
 	const [displayedText, setDisplayedText] = useState("");
@@ -61,7 +61,7 @@ const TypingEffect = () => {
 	}, []);
 
 	return (
-		<div className="  flex h-[70px] w-[600px] items-center space-x-6 ml-[460px] rounded-full bg-white px-6 py-3">
+		<div className="  flex h-[70px] w-[600px] items-center space-x-6 sm:ml-20 md:ml-[100px] lg:ml-[460px] rounded-full bg-white px-6 py-3">
 			<FontAwesomeIcon className="text-2xl text-gray-500" />
 			
 			<p className="text-xl sm:text-3xl flex flex-auto">
