@@ -17,10 +17,12 @@ import {
 } from "@/components/ui/dialog";
 import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
+import { FiMenu } from 'react-icons/fi';
 
 function Header() {
   const user = JSON.parse(localStorage.getItem('user'));
   const [openDialog, setOpenDialogue] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const login = useGoogleLogin({
     onSuccess: (codeResp) => GetUserProfile(codeResp),
@@ -44,13 +46,22 @@ function Header() {
   };
 
   return (
-    <div className="w-full py-3 px-3 shadow-lg flex flex-col md:flex-row justify-between items-center mt-0 sticky top-0 z-20 backdrop-filter backdrop-blur-sm md:backdrop-blur-lg">
+    <div className="w-full py-2 px-3 shadow-lg flex flex-col md:flex-row justify-between items-center mt-0 z-20 backdrop-filter backdrop-blur-sm  md:sticky md:top-0 md:backdrop-blur-lg">
       <div className='flex items-center mb-4 md:mb-0 rounded-full shadow-xl bg-black pr-4 '>
         <img src='/logo.png' className='ml-3 h-10 w-14 my-1' />
         <h2 className='font-extrabold text-[20px] text-white ml-2'>Wanderly.ai</h2>
       </div>
 
-      <div className='flex-grow flex items-center justify-center mt-4 md:mt-0 '>
+      {/* Collapsible Button for Small Screens */}
+      <div className="flex-grow flex items-center justify-center md:hidden">
+        <Button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-lg flex items-center gap-2">
+          <FiMenu />
+          
+        </Button>
+      </div>
+
+      {/* Navigation Links - Visible on Medium Screens and Up */}
+      <div className={`flex-grow flex items-center justify-center mt-4 md:mt-0 ${isMenuOpen ? 'block' : 'hidden'} md:flex`}>
         <div className='flex flex-col md:flex-row gap-4 md:gap-6 items-center'>
           <h2 className='font-semibold text-xl md:text-2xl hover:scale-110'><a href="/">Home</a></h2>
           <h2 className='hidden sm:block text-[20px] text-gray-300'>|</h2>
@@ -60,9 +71,9 @@ function Header() {
         </div>
       </div>
 
-      <div className='flex items-center mt-4 md:mt-0'>
+      <div className={`flex items-center mt-4 md:mt-0 ${user ? 'flex-col md:flex-row' : ''} md:flex-row gap-3 ${isMenuOpen ? 'flex-row' : ''}`}>
         {user ? (
-          <div className='flex flex-col md:flex-row gap-3 items-center'>
+          <div className={`flex items-center ${isMenuOpen ? 'flex-row' : 'flex-col md:flex-row'} gap-3`}>
             <a href='/create-trip'>
               <Button variant="outline" className="rounded-full text-xs md:text-sm">+ Create Trip</Button>
             </a>

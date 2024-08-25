@@ -44,7 +44,7 @@ function UserTripCardItem({ trip }) {
 
   return (
     
-      <div className='my-2 hover:scale-105 hover:drop-shadow-xl transition-all'>
+      <div className='my-2 hover:scale-105 hover:drop-shadow-xl transition-all relative'>
         <Link to={'/view-trip/' + trip.id}>
         <img src={PhotoUrl ? PhotoUrl : '/placeholder.jpg'} className='w-[400px] h-[220px] object-cover rounded-xl' />
         </Link>
@@ -54,7 +54,7 @@ function UserTripCardItem({ trip }) {
             <h2 className='text-sm text-gray-700 text-left'>{trip?.userselection?.noOfDays} Days trip, With {trip?.userselection?.budget} Budget</h2>
           </div>
           
-          <div className='mt-5 ml-32 hover:scale-110'>
+          <div className='mt-5 ml-32 hover:scale-110 absolute right-0 '>
             <Button onClick={handleDelete}><RiDeleteBinLine /></Button>
           </div>
         </div>

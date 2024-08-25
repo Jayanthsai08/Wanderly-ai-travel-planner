@@ -104,7 +104,7 @@ function CreateTrip() {
 
   return (
     <div className='bg-[url("/pattern.png")] h-full bg-cover my-0'>
-      <div className='bg-gradient-to-b backdrop-blur-lg my-10 mx-4 sm:mx-10 md:mx-20 lg:mx-56'>
+      <div className='bg-gradient-to-b backdrop-blur-lg my-10 mx-4 sm:mx-10 md:mx-40 lg:mx-72'>
         <div className='px-4 py-5 sm:px-10 md:px-21 lg:px-56 xl:px-10 flex-grow shadow-2xl rounded-2xl'>
           <h2 className='mt-10 font-bold text-2xl sm:text-3xl'>
             Tell us your travel preferences 🗺️📍
