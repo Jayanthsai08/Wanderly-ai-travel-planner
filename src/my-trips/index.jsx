@@ -17,7 +17,7 @@ function MyTrips() {
         const user = JSON.parse(localStorage.getItem('user'));
         
         if (!user) {
-            navigate('/');
+           navigate('/');
             return;
         }
 
@@ -37,7 +37,7 @@ function MyTrips() {
     };
 
     return (
-        <div className='px-4 sm:mx-4 lg:mx-10 sm:px-6 md:px-8 lg:px-12 xl:px-16 mx-auto mt-8  '>
+        <div className='px-4 sm:mx-4 lg:mx-10 sm:px-6 md:px-8 lg:px-12 xl:px-16 mx-auto mt-8 mb-14 '>
             <h2 className='font-bold text-2xl md:text-3xl text-left mb-6'>My Trips</h2>
 
             <div className='grid grid-cols-2 gap-6 mx-2 md:grid-cols-3 lg:grid-cols-3 lg:mx-10'>

@@ -10,6 +10,8 @@ import { Toaster } from './components/ui/sonner.jsx'
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import Viewtrip from './view-trip/[tripId]/index.jsx'
 import MyTrips from './my-trips/index.jsx'
+import Signup from './Auth/sign-up.jsx'
+import SignIn from './Auth/sign-in.jsx'
 
 const router=createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router=createBrowserRouter([
   {
     path:'/my-trips',
     element:<MyTrips/>
+  },
+  {
+    path:'/sign-up',
+    element:<Signup/>
+  },
+  {
+    path:'/sign-in',
+    element:<SignIn/>
   }
 ])
 

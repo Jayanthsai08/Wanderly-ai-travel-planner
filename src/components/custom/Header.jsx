@@ -83,13 +83,13 @@ function Header() {
 
             <Popover className='justify-center'>
               <PopoverTrigger>
-                <img src={user?.picture} className='h-[40px] w-[40px] md:h-[50px] md:w-[50px] rounded-full' />
+                <img src={user?.picture? user?.picture :  '/user.jpg'} className='h-[40px] w-[40px] md:h-[50px] md:w-[50px] rounded-full' />
               </PopoverTrigger>
               <PopoverContent>
                 <h2 className='cursor-pointer' onClick={() => {
                   googleLogout();
                   localStorage.clear();
-                  window.location.reload();
+                  
                 }}>
                   <a href="/">Logout</a>
                 </h2>
@@ -97,26 +97,11 @@ function Header() {
             </Popover>
           </div>
         ) : (
-          <Button onClick={() => setOpenDialogue(true)} className="text-xs md:text-sm mx-6">Sign in</Button>
+          <Button  className="text-xs md:text-sm mx-6"><a href="/sign-in">Sign in</a></Button>
         )}
       </div>
 
-      <Dialog open={openDialog}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle></DialogTitle>
-            <DialogDescription>
-              <img src="/logo.svg" />
-              <h2 className='font-bold text-lg text-black mt-7'>Sign-in with Google</h2>
-              <h2>Sign-in to the App with Google authentication securely.</h2>
-              <Button onClick={login} className='w-full mt-5 flex gap-4 items-center'>
-                <FcGoogle className='h-7 w-7' />
-                Sign-in with Google
-              </Button>
-            </DialogDescription>
-          </DialogHeader>
-        </DialogContent>
-      </Dialog>
+      
     </div>
   );
 }

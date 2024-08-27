@@ -30,7 +30,7 @@ function PlaceCardItem({ places }) {
                 <div>
                     <h2 className='font-bold text-lg text-left'>{places?.placeName}</h2>
                     <p className='text-left text-sm text-gray-500'>{places?.placeDetails}</p>
-                    <h2 className='mt-2 text-left'>🕘 {places?.timeToTravel}</h2>
+                    <h2 className='mt-2 text-left'>🕘 {places?.bestTimeToTravel}</h2>
 
                     {/**enable to use navigation button */}
 

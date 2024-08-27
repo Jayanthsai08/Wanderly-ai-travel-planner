@@ -3,6 +3,7 @@ import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
 import TypingEffect from '../ui/TypeEffects';
 import Footer from '@/view-trip/component/Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Hero() {
   return (
@@ -19,11 +20,10 @@ function Hero() {
         </div>
       </div>
       <div className='bg-gradient-to-b from-gray-700 to-white'>
-        <TypingEffect className='my-6 md:my-8 lg:my-10 ' />
+        <TypingEffect className='my-6 md:my-8 lg:my-10' />
         <Link to={'/create-trip'}>
-      
-          <Button className='mt-6 md:mt-8 lg:mt-11 rounded-full p-4 md:p-5 lg:p-5 py-3 md:py-4 lg:py-5 hover:scale-110 transition-all   shadow-xl '>
-            <h2 className='text-lg md:text-xl lg:text-3xl px-3 py-3'>Plan a trip.</h2>
+          <Button className='mt-6 md:mt-8 lg:mt-11 rounded-full p-4 md:p-5 lg:p-5 py-3 md:py-4 lg:py-5 hover:scale-110 transition-all shadow-xl ring-2 ring-black'>
+            <h2 className='text-lg md:text-xl lg:text-3xl px-3 py-3 lg:w-[300px] h=[50px]'>Plan a trip.</h2>
           </Button>
         </Link>
         <h2 className='font-extrabold text-3xl md:text-4xl lg:text-[50px] mt-12 md:mt-16 lg:mt-20 text-left px-4 md:px-8 lg:px-44'>

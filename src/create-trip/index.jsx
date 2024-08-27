@@ -109,7 +109,7 @@ function CreateTrip() {
           <h2 className='mt-10 font-bold text-2xl sm:text-3xl'>
             Tell us your travel preferences 🗺️📍
           </h2>
-          <p className='mt-3 text-gray-500 text-lg sm:text-xl'>
+          <p className='mt-3 text-gray-500 text-lg sm:text-xl mx-10'>
             Just provide us with some basic information, and our trip planner will generate a customized itinerary based on your preferences.
           </p>
           <div className='mt-5 flex flex-col gap-5'>

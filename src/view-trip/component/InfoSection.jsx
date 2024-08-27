@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import { GetPlaceDetails, PHOTO_REF_URL } from '@/service/GlobalApi';
 import React, { useEffect, useState } from 'react'
 import { FaShareFromSquare } from "react-icons/fa6";
+import ShareButton from '../component/ShareButton';
 
 function InfoSection({ trip }) {
 
@@ -43,7 +44,9 @@ const [PhotoUrl,setPhotoUrl]=useState();
                         <hr></hr>
                     </div>
                 </div>
-                <Button><FaShareFromSquare /></Button>
+                <div className="flex items-center">
+                    <ShareButton trip={trip} />
+                </div>
             </div>
         </div>
     )
