@@ -67,7 +67,7 @@ function Header() {
           <h2 className='hidden sm:block text-[20px] text-gray-300'>|</h2>
           <h2 className='font-semibold text-xl md:text-2xl hover:scale-110'><a href="/create-trip">Plan a Trip</a></h2>
           <h2 className='hidden sm:block text-[20px] text-gray-300'>|</h2>
-          <h2 className='font-semibold text-xl md:text-2xl hover:scale-110'><a href="">Blog</a></h2>
+          <h2 className='font-semibold text-xl md:text-2xl hover:scale-110'><a href="/blog">Blog</a></h2>
         </div>
       </div>
 
