@@ -32,11 +32,11 @@ const router=createBrowserRouter([
     element:<MyTrips/>
   },
   {
-    path:'/Auth/sign-up',
+    path:'/sign-up',
     element:<Signup/>
   },
   {
-    path:'/Auth/sign-in',
+    path:'/sign-in',
     element:<SignIn/>
   },
   {
