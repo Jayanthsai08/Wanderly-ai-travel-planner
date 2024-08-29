@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserTripCardItem from './component/BlogItem';
 import BlogItem from './component/BlogItem';
+import Footer from '@/view-trip/component/Footer';
 
 function BlogPosts() {
     const navigate = useNavigate();
@@ -37,7 +38,7 @@ function BlogPosts() {
 
     return (
         <div className='px-4 sm:mx-4 lg:mx-10 sm:px-6 md:px-8 lg:px-12 xl:px-16 mx-auto mt-8 mb-14 '>
-            <h2 className='font-bold text-2xl md:text-3xl text-left mb-6'>My Trips</h2>
+            <h2 className='font-bold text-2xl md:text-3xl lg:text-[40px] text-left mb-6'>Our Latest Posts</h2>
 
             <div className='grid grid-cols-2 gap-6 mx-2 md:grid-cols-3 lg:grid-cols-3 lg:mx-10'>
                 {loading ? (
@@ -57,6 +58,7 @@ function BlogPosts() {
                     <p className='text-center text-gray-500 col-span-full'>No Blogs found.</p>
                 )}
             </div>
+            <Footer/>
         </div>
     );
 }

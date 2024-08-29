@@ -3,6 +3,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserTripCardItem from './components/UserTripCardItem';
+import Footer from '@/view-trip/component/Footer';
 
 function MyTrips() {
     const navigate = useNavigate();
@@ -58,6 +59,7 @@ function MyTrips() {
                     <p className='text-center text-gray-500 col-span-full'>No trips found.</p>
                 )}
             </div>
+            <Footer/>
         </div>
     );
 }

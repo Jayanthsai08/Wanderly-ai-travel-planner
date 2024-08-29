@@ -37,11 +37,11 @@ function BlogItem({ trip }) {
         <div onClick={openModal} className='cursor-pointer'>
           <img
             src={PhotoUrl ? PhotoUrl : '/placeholder.jpg'}
-            className='w-[400px] h-[220px] object-cover rounded-xl'
+            className='w-[400px] h-[300px] object-cover rounded-xl'
             alt='Trip'
           />
-          <div className='absolute bottom-0 left-0 right-0 p-2 bg-black bg-opacity-50 rounded-b-xl'>
-            <span className='font-bold text-lg text-white'>
+          <div className='absolute bottom-0 left-0 right-0 py-5 bg-gradient-to-t from-gray-900 to grayscale-0 rounded-b-xl'>
+            <span className='font-bold text-2xl text-white'>
               {trip?.userselection?.location?.label}
             </span>
           </div>
