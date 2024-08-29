@@ -6,7 +6,6 @@ import InfoSection from '../component/infoSection';
 import Hotels from '../component/Hotels';
 import PlacesToVisit from '../component/PlacesToVisit';
 import Footer from '../component/Footer';
-import { useNavigate } from 'react-router-dom';
 
 
 function Viewtrip() {
