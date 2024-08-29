@@ -98,7 +98,7 @@ function SignIn() {
                         >
                             Sign In
                         </button>
-                        <a href="/sign-up" className="block text-center text-gray-600 mt-4">Don't have an account? Sign Up</a>
+                        <a href="/sign-up" className="block text-center text-gray-600 mt-4 hover:scale-105">Don't have an account? Sign Up</a>
                     </div>
                 </form>
                 <div className="w-1/2 bg-cover bg-center text-white flex items-center justify-center rounded-r-lg">
