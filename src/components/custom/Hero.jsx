@@ -27,8 +27,12 @@ function Hero() {
           </Button>
         </Link>
         <div>
-         <img src="/mock.png" className='h-[500px] w-[1300px] mx-28 my-16 '/>
-      </div>
+          <img
+            src="/mock.png"
+            className='w-full h-auto max-w-full max-h-[500px] mx-auto my-8'
+            alt='Mock'
+          />
+        </div>
         <h2 className='font-extrabold text-3xl md:text-4xl lg:text-[50px] mt-6 md:mt-16 lg:mt-8 text-left px-4 md:px-8 lg:px-44'>
           How to Use Wanderly.ai
         </h2>
@@ -46,7 +50,7 @@ function Hero() {
               Input your travel details such as destination, dates, budget. The more specific you are, the better the AI can tailor your itinerary to match your preferences.
             </h2>
             <Link to={'/create-trip'}>
-              <Button className='w-full sm:w-[200px] md:w-[400px] h-[50px] rounded-xl hover:scale-105 transition-all my-8'>
+              <Button className='sm:w-[200px] md:w-[300px] lg:w-[400px] h-[50px] rounded-xl hover:scale-105 transition-all my-8'>
                 <h2 className='font-semibold text-xl md:text-2xl'>Start Your Journey</h2>
               </Button>
             </Link>
@@ -68,7 +72,7 @@ function Hero() {
               After submitting your details, our AI works to create your personalized itinerary. This involves analyzing a wide range of travel data to ensure the best match for your trip. You'll be notified once your custom plan is ready.
             </h2>
             <Link to={'/create-trip'}>
-              <Button className='w-full md:w-[400px] h-[50px] md:h-[50px] rounded-xl hover:scale-105 transition-all my-8'>
+              <Button className='sm:w-[200px] md:w-[300px] lg:w-[400px] h-[50px] rounded-xl hover:scale-105 transition-all my-8'>
                 <h2 className='font-semibold text-xl md:text-2xl'>Get Started</h2>
               </Button>
             </Link>
@@ -88,7 +92,7 @@ function Hero() {
               Review and customize the suggested itinerary. Make any changes to fit your needs, explore additional options, and save the final plan. Get ready to enjoy a journey that's uniquely tailored to you.
             </h2>
             <Link to={'/create-trip'}>
-              <Button className='w-full md:w-[400px] h-[50px] md:h-[50px] rounded-xl hover:scale-105 transition-all my-8'>
+              <Button className='sm:w-[200px] md:w-[300px] lg:w-[400px] h-[50px] rounded-xl hover:scale-105 transition-all my-8'>
                 <h2 className='font-semibold text-xl md:text-2xl'>Try it out Today</h2>
               </Button>
             </Link>

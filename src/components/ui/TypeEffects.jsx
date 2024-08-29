@@ -61,16 +61,17 @@ const TypingEffect = () => {
 	}, []);
 
 	return (
-		<div className="flex h-[50px] w-full max-w-[600px] items-center space-x-4 sm:space-x-6 sm:h-[60px] lg:h-[70px] rounded-full bg-white px-4 sm:px-6 py-2 sm:py-3 lg:ml-[460px] md:ml-[100px] mx-auto">
-			<FontAwesomeIcon className="text-xl sm:text-2xl text-gray-500" />
+		<div className="flex h-[50px] w-full max-w-[600px] items-center space-x-4 sm:space-x-6 md:space-x-8 lg:space-x-12 sm:h-[60px] lg:h-[70px] rounded-full bg-white px-4 sm:px-6 py-2 sm:py-3 mx-auto">
+  <FontAwesomeIcon className="text-xl sm:text-2xl text-gray-500" />
 
-			<p className="text-lg sm:text-xl lg:text-3xl flex flex-auto">
-				{displayedText}
-				<span className="ml-1 text-gray-500">{isVisible ? "|" : ""}</span>
-			</p>
+  <p className="text-lg sm:text-xl lg:text-2xl flex flex-auto">
+    {displayedText}
+    <span className="ml-1 text-gray-500">{isVisible ? "|" : ""}</span>
+  </p>
 
-			<FaMagnifyingGlass className="text-xl sm:text-2xl" />
-		</div>
+  <FaMagnifyingGlass className="text-xl sm:text-2xl" />
+</div>
+
 
 	);
 };
