@@ -50,8 +50,7 @@ function BlogPosts() {
                         <div key={index} className='relative'>
                             <BlogItem trip={trip} />
                             {/* Example delete button */}
-                            
-                             
+                              
                         </div>
                     ))
                 ) : (
