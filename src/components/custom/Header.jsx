@@ -18,7 +18,6 @@ import {
 import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import { FiMenu } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
 
 function Header() {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -64,23 +63,23 @@ function Header() {
       {/* Navigation Links - Visible on Medium Screens and Up */}
       <div className={`flex-grow flex items-center justify-center mt-4 md:mt-0 ${isMenuOpen ? 'block' : 'hidden'} md:flex`}>
         <div className='flex flex-col md:flex-row gap-4 md:gap-6 items-center'>
-          <h2 className='font-semibold text-xl md:text-2xl hover:scale-110'><Link to="/">Home</Link></h2>
+          <h2 className='font-semibold text-xl md:text-2xl hover:scale-110'><a href="/">Home</a></h2>
           <h2 className='hidden sm:block text-[20px] text-gray-300'>|</h2>
-          <h2 className='font-semibold text-xl md:text-2xl hover:scale-110'><Link to="/create-trip">Plan a Trip</Link></h2>
+          <h2 className='font-semibold text-xl md:text-2xl hover:scale-110'><a href="/create-trip">Plan a Trip</a></h2>
           <h2 className='hidden sm:block text-[20px] text-gray-300'>|</h2>
-          <h2 className='font-semibold text-xl md:text-2xl hover:scale-110'><Link to="/blog">Blog</Link></h2>
+          <h2 className='font-semibold text-xl md:text-2xl hover:scale-110'><a href="/blog">Blogs</a></h2>
         </div>
       </div>
 
       <div className={`flex items-center mt-4 md:mt-0 ${user ? 'flex-col md:flex-row' : ''} md:flex-row gap-3 ${isMenuOpen ? 'flex-row' : ''}`}>
         {user ? (
           <div className={`flex items-center ${isMenuOpen ? 'flex-row' : 'flex-col md:flex-row'} gap-3`}>
-            <Link to='/create-trip'>
+            <a href='/create-trip'>
               <Button variant="outline" className="rounded-full text-xs md:text-sm">+ Create Trip</Button>
-            </Link>
-            <Link to='/my-trips'>
+            </a>
+            <a href='/my-trips'>
               <Button variant="outline" className="rounded-full text-xs md:text-sm">My trips</Button>
-            </Link>
+            </a>
 
             <Popover className='justify-center'>
               <PopoverTrigger>
