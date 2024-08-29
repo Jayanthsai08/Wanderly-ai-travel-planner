@@ -61,7 +61,7 @@ function Hero() {
         <div className='flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-30 ml-2 md:ml-20 lg:ml-32'>
           <img
             src="/ai.webp"
-            className='w-full h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-1 lg:mb-1'
+            className='w-full mt-8 h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-1 lg:mb-1'
             alt='AI'
           />
           <div className='mt-2 md:mt-2 lg:mt-0 ml-0 md:ml-14 lg:ml-20 shadow-xl w-full md:w-[600px] lg:w-[600px] rounded-3xl bg-white'>
@@ -81,7 +81,7 @@ function Hero() {
         <div className='flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-30 ml-2 md:ml-20 lg:ml-32'>
           <img
             src="/passport.webp"
-            className='w-full h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-8 lg:mb-8'
+            className='w-full h-auto mt-8 md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-8 lg:mb-8'
             alt='Passport'
           />
           <div className='mt-2 md:mt-2 lg:mt-4 ml-0 md:ml-14 lg:ml-20 shadow-xl w-full md:w-[600px] lg:w-[600px] rounded-3xl bg-white'>
