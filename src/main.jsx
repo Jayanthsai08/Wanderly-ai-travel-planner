@@ -13,6 +13,7 @@ import MyTrips from './my-trips/index.jsx';
 import Signup from './Auth/sign-up.jsx';
 import SignIn from './Auth/sign-in.jsx';
 import BlogPosts from './blog/index.jsx';
+import SharedTrip from './shared-trip/[tripId]/index.jsx';
 
 // Define all the routes for the application
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
     path: '/blog',
     element: <BlogPosts />,
   },
+  {
+    path: '/shared-trip/:tripId',
+    element: <SharedTrip />,
+  }
 ]);
 
 // Render the root component

@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { GetPlaceDetails, PHOTO_REF_URL } from '@/service/GlobalApi';
 import React, { useEffect, useState } from 'react'
-import ShareButton from '../component/ShareButton';
 
 
 function InfoSection({ trip }) {
@@ -43,8 +42,8 @@ const [PhotoUrl,setPhotoUrl]=useState();
                         </h2>
                         <hr></hr>
                     </div>
+                    
                 </div>
-                <ShareButton trip={trip} />
             </div>
         </div>
     )
