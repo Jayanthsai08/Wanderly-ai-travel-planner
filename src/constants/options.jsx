@@ -2,7 +2,7 @@ export const SelectTravelsList=[
     {
     id:1,
     title:'Just me',
-    desc:'A sole traveler in exploration',
+    desc:'A solo traveler in exploration',
     icon:'✈️',
     people:'1'
     },
@@ -16,7 +16,7 @@ export const SelectTravelsList=[
     {
         id:3,
         title:'Family',
-        desc:'A group od fun loving adv',
+        desc:'A group od fun loving People',
         icon:'🏡',
         people:'3 to 5 people'
     },

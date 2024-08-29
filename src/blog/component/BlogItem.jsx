@@ -59,7 +59,7 @@ function BlogItem({ trip }) {
         <div className='bg-white p-6 rounded-lg shadow-lg w-full max-w-3xl h-3/4 sm:h-auto sm:max-h-[80%] overflow-y-auto scrollbar-hide relative'>
           <button
             onClick={closeModal}
-            className='absolute top-2 right-2 bg-black text-white px-2 rounded-lg z-10'
+            className='absolute top-2 right-2 bg-black text-white px-2 rounded-lg z-10 hover:scale-110 teansition-all'
           >
             ✕
           </button>
@@ -80,13 +80,11 @@ function BlogItem({ trip }) {
               <div key={index} className='mt-5'>
                 <div className='grid md:grid-cols-1 gap-5'>
                 <h2 className='text-lg'>{item?.description}</h2>
-                  
-                 
                 </div>
               </div>
             ))}
           </div>
-          <Button onClick={closeModal} className='font-bold text-[20px] w-full  '>Close</Button>
+          <Button onClick={closeModal} className='font-bold text-[20px] w-full mt-5 hover:scale-105 transition-all  '>Close</Button>
         </div>
 
       </Modal>

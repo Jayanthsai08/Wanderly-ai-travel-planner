@@ -54,7 +54,10 @@ createRoot(document.getElementById('root')).render(
       <Header />
       <Toaster />
       {/* RouterProvider handles routing for all defined routes */}
-      <RouterProvider router={router} />
+      <RouterProvider router={router}> 
+        
+       
+      </RouterProvider>
     </GoogleOAuthProvider>
   </StrictMode>
 );
