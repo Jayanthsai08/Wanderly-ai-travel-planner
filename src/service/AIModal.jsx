@@ -22,7 +22,7 @@ import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/ge
         {
           role: "user",
           parts: [
-            {text: "Generate Travel Plan for tocation: Las Vegas, for 3 Days for Couple with a Cheap budget, Give me a Hotels options list with around 4 to 5 options which align with the budget with HotelName, Hotel address, Approximate Pricing for one night for a room in the hotel, hotel image url, geo coordinates, rating, descriptions and suggest itinerary with placeName, Place Details, Place Image Url, Geo Coordinates, ticket Pricing, Rating, best time of day to travel for 3 days with each day plan with best time of the day to visit each of the loactions and order the places to visit according to the best time to visit each of the locations JSON format."},
+            {text: "Generate Travel Plan for tocation: Las Vegas, for 3 Days for Couple with a Cheap budget, Give me a Hotels options list with around 4 to 5 options which align with the budget with HotelName, Hotel address, Approximate Pricing for one night for a room in the hotel, hotel image url, geo coordinates, rating, descriptions and suggest itinerary with placeName, Place Details, Place Image Url, Geo Coordinates, ticket Pricing, Rating, best time of day to travel for 3 days with each day plan with best time of the day to visit each of the loactions and order the places to visit according to the best time to visit each of the locations, generate atleast 3 places to visit on each day in JSON format."},
           ],
         },
         {

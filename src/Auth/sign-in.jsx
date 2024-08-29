@@ -36,7 +36,7 @@ function SignIn() {
             localStorage.setItem('user', JSON.stringify(resp.data));
             setOpenDialog(false);
             window.location.href = '/'; // Redirect to home page
-            window.location.reload(); 
+            window.location.reload();
             window.location.href = '/'; // Reload the page
         } catch (error) {
             console.error("Error fetching user profile:", error);
@@ -53,8 +53,8 @@ function SignIn() {
 
             localStorage.setItem('user', JSON.stringify({ uid: user.uid, email: user.email }));
 
-            window.location.href = '/'; // Redirect to home page
-            window.location.reload(); // Reload the page
+            alert('Signed in successfully!');
+            window.location.href = '/'// Reload the page
         } catch (err) {
             console.error('Error signing in:', err);
             setError('Invalid email or password');

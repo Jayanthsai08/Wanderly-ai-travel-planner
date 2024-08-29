@@ -44,9 +44,7 @@ const [PhotoUrl,setPhotoUrl]=useState();
                         <hr></hr>
                     </div>
                 </div>
-                <div className="flex items-center">
-                    <ShareButton trip={trip} />
-                </div>
+                
             </div>
         </div>
     )

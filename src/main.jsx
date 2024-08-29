@@ -12,6 +12,7 @@ import Viewtrip from './view-trip/[tripId]/index.jsx'
 import MyTrips from './my-trips/index.jsx'
 import Signup from './Auth/sign-up.jsx'
 import SignIn from './Auth/sign-in.jsx'
+import BlogPosts from './blog/index.jsx'
 
 const router=createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router=createBrowserRouter([
   {
     path:'/sign-in',
     element:<SignIn/>
+  },
+  {
+    path:'/blog',
+    element:<BlogPosts/>
   }
 ])
 

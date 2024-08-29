@@ -26,17 +26,10 @@ function UserTripCardItem({ trip }) {
 
   const handleDelete = async () => {
     try {
-      // Reference to the document in the AITrips collection
       const tripDocRef = doc(db, "AITrips", trip.id);
-      
-      // Delete the document
       await deleteDoc(tripDocRef);
-      
-      // Optionally, show a success message or refresh the list
       console.log("Trip deleted successfully");
-      
-      // Optionally, refresh the page or update state to reflect the deletion
-      window.location.reload(); // Or use state management to remove the trip from the UI
+      window.location.reload(); 
     } catch (error) {
       console.error("Error deleting trip:", error);
     }

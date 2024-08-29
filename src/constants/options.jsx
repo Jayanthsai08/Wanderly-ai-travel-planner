@@ -48,6 +48,55 @@ export const SelectBudgetOptions=[
         desc:'Dont worry about cost',
         icon:'💸'
     }
-]
+] 
+
+export const SelectActivities=[
+    {
+        id:1,
+        title:'Beaches',
+        icon:'🏖️'
+    },
+    {
+        id:2,
+        title:'Hiking',
+        icon:'🧗🏽‍♂️'
+    },
+    {
+        id:3,
+        title:'Sightseeing',
+        icon:'🌉'
+    },
+    {
+        id:4,
+        title:'Food Exploration',
+        icon:'🥘'
+    },
+    {
+        id:5,
+        title:'Nightlife',
+        icon:'🌃'
+    },
+    {
+        id:6,
+        title:'Culture',
+        icon:'⛩️'
+    },
+    {
+        id:7,
+        title:'Shopping',
+        icon:'🛍️'
+    },
+    {
+        id:8,
+        title:'Sports',
+        icon:'🚴🏽‍♀️'
+    },
+    {
+        id:9,
+        title:'Wellness',
+        icon:'🪷'
+    }
+] 
+
 
 export const AI_PROMPT='Generate Travel Plan for Location: {location}, for {totalDays} Days for {traveler} with a {budget} budget, give me Hotels options list with HotelName, Hotel address, Price, hotel image url, geo coordinates, rating, descriptions and suggest itinerary with placeName, Place Details, Place Image Url, Geo Coordinates, ticket Pricing, Time travel each of the location for {totalDays} days with each day plan with best time to visit in JSON format.'

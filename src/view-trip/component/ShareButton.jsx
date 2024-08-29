@@ -26,7 +26,7 @@ function ShareButton({ trip }) {
     return (
         <div className="flex flex-col space-x-4 mr-2">
             <button onClick={handleWebShare} className="bg-black text-white p-2 rounded-lg hover:scale-110 transition-all shadow-xl flex flex-row ">
-            <FaShareFromSquare className='size-7 '/>
+            <FaShareFromSquare className='size-7'/>
             
             </button>
         </div>

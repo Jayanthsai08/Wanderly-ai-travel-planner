@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Hero() {
   return (
     <div>
-      <div className='bg-gradient-to-b from-black to bg-gray-700 h-full'>
+      <div className='bg-gradient-to-b from-black to bg-gray-500 h-full'>
         <div className='flex flex-col items-center mx-4 md:mx-12 lg:mx-60 gap-9 px-4 md:px-10 lg:px-14 '>
           <h1 className='font-black text-4xl md:text-5xl lg:text-[60px] text-center mt-32  md:mt-16 lg:mt-28'>
             <span className='text-white '>Your Perfect Trip, Curated by AI:</span>{' '}
@@ -19,21 +19,23 @@ function Hero() {
           </h1>
         </div>
       </div>
-      <div className='bg-gradient-to-b from-gray-700 to-white'>
-        <TypingEffect className='my-6 md:my-8 lg:my-10' />
+      <div className='bg-gradient-to-b from-gray-500 to-white'>
+        <TypingEffect className='my-6 md:my-8 lg:mt-10' />
         <Link to={'/create-trip'}>
           <Button className='mt-6 md:mt-8 lg:mt-11 rounded-full p-4 md:p-5 lg:p-5 py-3 md:py-4 lg:py-5 hover:scale-110 transition-all shadow-xl ring-2 ring-black'>
             <h2 className='text-lg md:text-xl lg:text-3xl px-3 py-3 lg:w-[300px] h=[50px]'>Plan a trip.</h2>
           </Button>
         </Link>
-        <h2 className='font-extrabold text-3xl md:text-4xl lg:text-[50px] mt-12 md:mt-16 lg:mt-20 text-left px-4 md:px-8 lg:px-44'>
+        <div>
+         <img src="/mock.png" className='h-[500px] w-[1300px] mx-28 my-16 '/>
+      </div>
+        <h2 className='font-extrabold text-3xl md:text-4xl lg:text-[50px] mt-6 md:mt-16 lg:mt-8 text-left px-4 md:px-8 lg:px-44'>
           How to Use Wanderly.ai
         </h2>
-
         <div className='flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-30 ml-2 md:ml-20 lg:ml-32'>
           <img
             src="/map.webp"
-            className='w-full h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-12 lg:mb-16'
+            className='w-full h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-12 lg:mb-14'
             alt='Map'
           />
           <div className='mt-2 md:mt-2 lg:mt-4 ml-0 md:ml-14 lg:ml-20 shadow-xl w-full md:w-[600px] lg:w-[600px] rounded-3xl  bg-white'>
@@ -55,7 +57,7 @@ function Hero() {
         <div className='flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-30 ml-2 md:ml-20 lg:ml-32'>
           <img
             src="/ai.webp"
-            className='w-full h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-12 lg:mb-16'
+            className='w-full h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-1 lg:mb-1'
             alt='AI'
           />
           <div className='mt-2 md:mt-2 lg:mt-0 ml-0 md:ml-14 lg:ml-20 shadow-xl w-full md:w-[600px] lg:w-[600px] rounded-3xl bg-white'>
@@ -75,7 +77,7 @@ function Hero() {
         <div className='flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-30 ml-2 md:ml-20 lg:ml-32'>
           <img
             src="/passport.webp"
-            className='w-full h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-12 lg:mb-16'
+            className='w-full h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-8 lg:mb-8'
             alt='Passport'
           />
           <div className='mt-2 md:mt-2 lg:mt-4 ml-0 md:ml-14 lg:ml-20 shadow-xl w-full md:w-[600px] lg:w-[600px] rounded-3xl bg-white'>

@@ -1,8 +1,8 @@
+import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { AI_PROMPT, SelectBudgetOptions, SelectTravelsList } from '@/constants/options';
+import { AI_PROMPT, SelectActivities, SelectBudgetOptions, SelectTravelsList } from '@/constants/options';
 import { chatSession } from '@/service/AIModal';
-import React, { useEffect, useState } from 'react';
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import { toast } from 'sonner';
 import {
@@ -22,7 +22,9 @@ import { useNavigate } from 'react-router-dom';
 
 function CreateTrip() {
   const [place, setPlace] = useState();
-  const [formData, setFormData] = useState([]);
+  const [formData, setFormData] = useState({
+    activities: [], // Initialize activities as an empty array
+  });
   const [loading, setLoading] = useState(false);
   const [openDialog, setOpenDialogue] = useState(false);
   const navigate = useNavigate();
@@ -31,6 +33,19 @@ function CreateTrip() {
     setFormData({
       ...formData,
       [name]: value,
+    });
+  };
+
+  const toggleActivity = (activity) => {
+    setFormData((prev) => {
+      const isAlreadySelected = prev.activities.includes(activity);
+      const updatedActivities = isAlreadySelected
+        ? prev.activities.filter((act) => act !== activity) // Remove activity if already selected
+        : [...prev.activities, activity]; // Add activity if not selected
+      return {
+        ...prev,
+        activities: updatedActivities,
+      };
     });
   };
 
@@ -51,18 +66,18 @@ function CreateTrip() {
       return;
     }
 
-    if (formData?.noOfDays > 10 && !formData?.location || !formData?.budget || !formData?.traveler) {
+    if (formData?.noOfDays > 10 && (!formData?.location || !formData?.budget || !formData?.traveler || !formData?.activities.length)) {
       toast("Please fill all details");
       return;
     }
 
     setLoading(true);
     const FINAL_PROMPT = AI_PROMPT
-      .replace('{location}', formData?.location.label)
+      .replace('{location}', formData?.location?.label)
       .replace('{totalDays}', formData?.noOfDays)
       .replace('{traveler}', formData?.traveler)
       .replace('{budget}', formData?.budget)
-      .replace('{totalDays}', formData?.noOfDays);
+      .replace('{activities}', formData.activities.join(', ')); // Include activities in the prompt
 
     const result = await chatSession.sendMessage(FINAL_PROMPT);
 
@@ -129,6 +144,7 @@ function CreateTrip() {
             <Input className='shadow-sm' placeholder={'Ex.3'} type="number"
               onChange={(e) => handleInputChange('noOfDays', e.target.value)} />
           </div>
+          <hr/>
           <div>
             <h2 className='text-lg sm:text-xl mt-10 font-medium'>What is Your budget? The budget exclusively allocated for activities and dining purposes</h2>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-5'>
@@ -157,6 +173,21 @@ function CreateTrip() {
                   <h2 className='text-4xl'>{item.icon}</h2>
                   <h2 className='font-bold text-lg'>{item.title}</h2>
                   <h2 className='text-sm text-gray-500'>{item.desc}</h2>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h2 className='text-lg sm:text-xl my-3 font-medium'>What activities are you interested in?</h2>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-5'>
+              {SelectActivities.map((item, index) => (
+                <div key={index}
+                  onClick={() => toggleActivity(item.title)}
+                  className={`p-4 border rounded-lg drop-shadow-md hover:shadow-lg cursor-pointer
+                    ${formData?.activities.includes(item.title) && 'shadow-xl border-black'}
+                  `}>
+                  <h2 className='text-4xl'>{item.icon}</h2>
+                  <h2 className='font-bold text-lg'>{item.title}</h2>
                 </div>
               ))}
             </div>
