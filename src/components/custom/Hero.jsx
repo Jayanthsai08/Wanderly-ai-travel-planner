@@ -29,7 +29,7 @@ function Hero() {
         <div>
           <img
             src="/mock.png"
-            className='w-full h-auto max-w-full max-h-[500px] mx-auto my-8 '
+            className='w-full h-auto max-w-full max-h-[00px] mx-auto my-8 '
             alt='Mock'
           />
         </div>
@@ -39,7 +39,7 @@ function Hero() {
         <div className='flex flex-col md:flex-row items-center px-4 md:px-10 lg:px-30 ml-2 md:ml-20 lg:ml-32'>
           <img
             src="/map.webp"
-            className='w-full h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px] mb-8 md:mb-12 lg:mb-14'
+            className='w-full h-auto md:w-1/2 lg:w-[500px] md:h-auto lg:h-[500px]  mb-1 md:mb-1 lg:mb-1'
             alt='Map'
           />
           <div className='mt-2 md:mt-2 lg:mt-4 ml-0 md:ml-14 lg:ml-20 shadow-xl w-full md:w-[600px] lg:w-[600px] rounded-3xl  bg-white'>
