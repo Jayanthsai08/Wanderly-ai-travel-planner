@@ -2,10 +2,10 @@ import { db } from '@/service/firebaseConfig';
 import { doc, getDoc } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import InfoSection from '../component/InfoSection';
 import Hotels from '../component/Hotels';
 import PlacesToVisit from '../component/PlacesToVisit';
 import Footer from '../component/Footer';
+import InfoSection from '../component/InfoSection';
 
 
 function Viewtrip() {

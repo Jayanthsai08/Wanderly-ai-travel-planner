@@ -1,8 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { GetPlaceDetails, PHOTO_REF_URL } from '@/service/GlobalApi';
 import React, { useEffect, useState } from 'react'
-import { FaShareFromSquare } from "react-icons/fa6";
-import ShareButton from '../component/ShareButton';
+
 
 function InfoSection({ trip }) {
 
@@ -50,4 +49,4 @@ const [PhotoUrl,setPhotoUrl]=useState();
     )
 }
 
-export default InfoSection
+export default InfoSection;
