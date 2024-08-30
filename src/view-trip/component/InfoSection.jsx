@@ -6,26 +6,30 @@ import ShareButton from '../component/ShareButton';
 
 function InfoSection({ trip }) {
 
-const [PhotoUrl,setPhotoUrl]=useState();
-    useEffect(()=>{
-       trip&&GetPlacePhoto()
-    },[trip])
+    const [PhotoUrl, setPhotoUrl] = useState();
+    useEffect(() => {
+        trip && GetPlacePhoto()
+    }, [trip])
 
-    const GetPlacePhoto=async()=>{
-        const data={
-            textQuery:trip?.userselection?.location?.label
+    const GetPlacePhoto = async () => {
+        const data = {
+            textQuery: trip?.userselection?.location?.label
         }
-        const result=await GetPlaceDetails(data).then(resp=>{
+        const result = await GetPlaceDetails(data).then(resp => {
             console.log(resp.data.places[0].photos[2].name)
 
-            const PhotoUrl=PHOTO_REF_URL.replace('{NAME}',resp.data.places[0].photos[1].name);
+            const PhotoUrl = PHOTO_REF_URL.replace('{NAME}', resp.data.places[0].photos[1].name);
             setPhotoUrl(PhotoUrl);
         })
     }
-    
+
     return (
         <div>
-            <img src={PhotoUrl?PhotoUrl:'/placeholder.jpg'} className='h-[450px] w-full object-cover rounded-[50px]'></img>
+            <img
+                src={PhotoUrl ? PhotoUrl : '/placeholder.jpg'}
+                className='w-full object-cover rounded-[50px] h-[300px] sm:h-[300px] md:h-[300px] lg:h-[450px] xl:h-[450px]'>
+            </img>
+
             <div className='flex justify-between items-center'>
                 <div className='my-5 flex flex-col gap-2'>
                     <h2 className='font-bold text-3xl text-left'>
