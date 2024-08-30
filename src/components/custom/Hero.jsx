@@ -29,7 +29,7 @@ function Hero() {
         <div>
           <img
             src="/mock.png"
-            className='w-full h-auto max-w-full max-h-[00px] mx-auto my-8 '
+            className='w-full h-auto lg:w-[1200px] max-w-[1200px] max-h-[500px] mx-auto my-12'
             alt='Mock'
           />
         </div>

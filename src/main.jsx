@@ -14,6 +14,7 @@ import Signup from './Auth/sign-up.jsx';
 import SignIn from './Auth/sign-in.jsx';
 import BlogPosts from './blog/index.jsx';
 import SharedTrip from './shared-trip/[tripId]/index.jsx';
+import Hero from './components/custom/Hero.jsx';
 
 // Define all the routes for the application
 const router = createBrowserRouter([
@@ -60,8 +61,6 @@ createRoot(document.getElementById('root')).render(
       <Toaster />
       {/* RouterProvider handles routing for all defined routes */}
       <RouterProvider router={router}> 
-        
-       
       </RouterProvider>
     </GoogleOAuthProvider>
   </StrictMode>
