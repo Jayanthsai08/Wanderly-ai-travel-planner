@@ -44,7 +44,5 @@ Contributions are welcome! If you’d like to contribute, feel free to fork the 
 
 ---
 
-## 🧑‍💻 Contact
 
-I’m always open to connect and discuss AI, web development, and travel tech. Feel free to reach out via LinkedIn or through this repository!
 
