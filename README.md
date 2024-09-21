@@ -24,17 +24,27 @@
 
 ---
 
-## 🛠️ Installation and Setup
+## 🌐 Live Demo
 
-Follow the steps below to set up Wanderly locally.
+Explore the live version of Wanderly:  
+**[Wanderly Live](https://lnkd.in/gMdyd-ca)**
 
-### 1. Clone the Repository
+---
 
-```bash
-git clone https://github.com/your-username/wanderly-travel-planner.git
-cd wanderly-travel-planner
+## 🔗 Project Links
 
-Once inside the project folder, install all the required dependencies using npm
+- **Live Website**: [Wanderly Live](https://lnkd.in/gMdyd-ca)
+- **GitHub Repository**: [Wanderly GitHub](https://lnkd.in/g38H632k)
 
-cd wanderly-travel-planner
+---
+
+## 🤝 Contributions
+
+Contributions are welcome! If you’d like to contribute, feel free to fork the repository and submit a pull request. For major changes, please open an issue to discuss what you’d like to change.
+
+---
+
+## 🧑‍💻 Contact
+
+I’m always open to connect and discuss AI, web development, and travel tech. Feel free to reach out via LinkedIn or through this repository!
 
