@@ -33,8 +33,8 @@ Explore the live version of Wanderly:
 
 ## 🔗 Project Links
 
-- **Live Website**: [Wanderly Live](https://lnkd.in/gMdyd-ca)
-- **GitHub Repository**: [Wanderly GitHub](https://lnkd.in/g38H632k)
+- **Live Website**: [Wanderly Live](https://wanderly-ai-travel-planner.vercel.app/)
+- **GitHub Repository**: [Wanderly GitHub](https://github.com/Jayanthsai08/Wanderly-ai-travel-planner.git)
 
 ---
 
