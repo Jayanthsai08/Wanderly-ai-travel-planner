@@ -27,7 +27,7 @@
 ## 🌐 Live Demo
 
 Explore the live version of Wanderly:  
-**[Wanderly Live]([https://lnkd.in/gMdyd-ca](https://wanderly-ai-travel-planner.vercel.app/))**
+**[Wanderly Live](https://wanderly-ai-travel-planner.vercel.app/)**
 
 ---
 
