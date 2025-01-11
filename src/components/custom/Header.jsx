@@ -35,9 +35,11 @@ function Header() {
 
   return (
     <div className="w-full py-2 px-3 shadow-lg flex flex-col md:flex-row justify-between items-center mt-0 z-20 backdrop-filter backdrop-blur-sm md:sticky md:top-0 md:backdrop-blur-lg">
-      <div className='flex items-center mb-4 md:mb-0 rounded-full shadow-xl bg-black pr-4'>
+      <div className='flex items-center mb-4 md:mb-0 rounded-full '>
         <img src='/logo.png' className='ml-3 h-10 w-14 my-1' alt="Logo" />
+        <div className=' rounded-full mb-4 md:mb-0 p-1 bg-black pr-4'>
         <h2 className='font-extrabold text-[20px] text-white ml-2'>Wanderly.ai</h2>
+        </div>
       </div>
 
       {/* Collapsible Button for Small Screens */}

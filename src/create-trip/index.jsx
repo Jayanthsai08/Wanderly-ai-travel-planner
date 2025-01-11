@@ -20,12 +20,17 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { db } from '@/service/firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import Footer from '@/view-trip/component/Footer';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 
 function CreateTrip() {
   const [place, setPlace] = useState();
   const [formData, setFormData] = useState({
     activities: [], // Initialize activities as an empty array
   });
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const [numberOfDays, setNumberOfDays] = useState(0);
   const [loading, setLoading] = useState(false);
   const [openDialog, setOpenDialogue] = useState(false);
   const navigate = useNavigate();
@@ -50,9 +55,17 @@ function CreateTrip() {
     });
   };
 
+  const calculateNumberOfDays = (start, end) => {
+    if (start && end) {
+      const difference = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+      setNumberOfDays(difference > 0 ? difference : 0);
+      handleInputChange('noOfDays', difference > 0 ? difference : 0);
+    }
+  };
+
   useEffect(() => {
-    console.log(formData);
-  }, [formData]);
+    calculateNumberOfDays(startDate, endDate);
+  }, [startDate, endDate]);
 
   const login = useGoogleLogin({
     onSuccess: (codeResp) => GetUserProfile(codeResp),
@@ -67,7 +80,7 @@ function CreateTrip() {
       return;
     }
 
-    if (formData?.noOfDays > 10 && (!formData?.location || !formData?.budget || !formData?.traveler || !formData?.activities.length)) {
+    if (formData?.noOfDays > 10 && (!formData?.location || !formData?.budget || !formData?.startDate || !formData?.endDate || !formData?.traveler || !formData?.activities.length)) {
       toast("Please fill all details");
       return;
     }
@@ -75,6 +88,8 @@ function CreateTrip() {
     setLoading(true);
     const FINAL_PROMPT = AI_PROMPT
       .replace('{location}', formData?.location?.label)
+      .replace('{startDate}', formData?.startDate)
+      .replace('{endDate}', formData?.endDate)
       .replace('{totalDays}', formData?.noOfDays)
       .replace('{traveler}', formData?.traveler)
       .replace('{budget}', formData?.budget)
@@ -141,9 +156,24 @@ function CreateTrip() {
             </div>
           </div>
           <div className='mt-10'>
-            <h2 className='text-lg sm:text-xl my-3 font-medium'>How many days are you planning to visit?</h2>
-            <Input className='shadow-sm' placeholder={'Ex.3'} type="number"
-              onChange={(e) => handleInputChange('noOfDays', e.target.value)} />
+            <h2 className='text-lg sm:text-xl my-3 font-medium'>Select your travel dates</h2>
+            <div className='flex gap-5 mt-2 justify-center'>
+            <h2 className='text-lg sm:text-xl my-1 font-medium '>From</h2>
+              <DatePicker
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                placeholderText="Start Date"
+                className="border p-2 rounded"
+              />
+              <h2 className='text-lg sm:text-xl my-1 font-medium'>To</h2>
+              <DatePicker
+                selected={endDate}
+                onChange={(date) => setEndDate(date)}
+                placeholderText="End Date"
+                className="border p-2 rounded"
+              />
+            </div>
+            <p className='mt-3 mb-3 text-gray-500'>Total Days: {numberOfDays || 'N/A'}</p>
           </div>
           <hr/>
           <div>

@@ -59,6 +59,11 @@
   }
 }
 
+hidden-div {
+  padding: 0 !important;  /* Remove padding */
+  display: none !important;  /* Hide div completely */
+}
+
 @layer base {
   * {
     @apply border-border;
